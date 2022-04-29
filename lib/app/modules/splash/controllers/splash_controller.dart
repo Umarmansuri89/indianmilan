@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import '../../../routes/app_pages.dart';
-import '../../../utils/shared_prefrence/shared_preferences_singleton.dart';
-import '../../../utils/shared_prefrence/shared_prefrences_constant.dart';
+import 'package:indianmilan/app/routes/app_pages.dart';
+import 'package:indianmilan/app/utils/shared_prefrence/shared_preferences_singleton.dart';
+import 'package:indianmilan/app/utils/shared_prefrence/shared_prefrences_constant.dart';
+
 
 class SplashController extends GetxController {
   final count = 0.obs;
@@ -24,8 +25,9 @@ class SplashController extends GetxController {
     String status = SharedPreferencesUtils.getBoolean(SDConstant.token).toString();
     print("status"+status);
 
-  //   status.isNotEmpty && status!="false"
-  //       ? Get.offAllNamed(Routes.DASHBOARD)
-  //       : Get.offAllNamed(Routes.WELCOME);
-   }
+    Get.offAllNamed(Routes.LOGIN_TYPE);
+    // status.isNotEmpty && status!="false"
+    //     ? Get.offAllNamed(Routes.LOGIN_TYPE)
+    //     : Get.offAllNamed(Routes.WELCOME);
+  }
 }
