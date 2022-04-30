@@ -201,7 +201,6 @@ class login_view extends GetView<loginController> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-
                         Container(
                           padding: EdgeInsets.all(20),
                           child: TextFieldShow(
@@ -222,7 +221,6 @@ class login_view extends GetView<loginController> {
                             fontsize: 14,
                           ),
                         ),
-
 
                       ],),
                 ],),
@@ -260,7 +258,6 @@ class login_view extends GetView<loginController> {
                ),
              ),
              Container(
-
                margin: EdgeInsets.fromLTRB(00, 80, 00, 00),
                child: Row(
                  mainAxisAlignment: MainAxisAlignment.center,

@@ -10,7 +10,7 @@ class Register_six_Controller extends GetxController {
   var obscureNewPass = false.obs;
   // var items_party_type=['a','b','c','d'].obs;
   final items_party_type = <String>["a","b","c","d"].obs;
-  String? selectedValue;
+  String? selectedValue="";
 
   final TextEditingController emailController = TextEditingController(text: "");
   final TextEditingController passwordcontroller = TextEditingController(text: "");

@@ -43,6 +43,7 @@ dependencies:
   flutter_rounded_date_picker: ^2.0.2
   pin_code_text_field: ^1.8.0
   pin_code_fields: ^7.3.0
+  persistent_bottom_nav_bar: ^4.0.2
 
 flutter_launcher_name:
   name: "Indian Milan"

@@ -160,6 +160,7 @@ class Upload_photo_view extends GetView<Upload_photo_Controller> {
                             ),
                           ),
                           onTap: () async {
+                            Get.offAllNamed(Routes.PARTNER_PREFERENCE_SCREEN);
 
                             //Get.offAllNamed(Routes.REGISTER_TWO);
                           },
@@ -209,18 +210,11 @@ class Upload_photo_view extends GetView<Upload_photo_Controller> {
                                           fontsize: 16,
                                         ),
                                       )
-
                                   )
-
-                                ],)
-
-
-
-
+                                  ],)
                           ),
                           onTap: () async {
 
-                            //Get.offAllNamed(Routes.REGISTER_TWO);
                           },
                         ),
                       ),

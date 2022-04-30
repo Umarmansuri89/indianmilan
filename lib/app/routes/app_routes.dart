@@ -16,6 +16,7 @@ abstract class Routes {
   static const REGISTER_SIX = _Paths.REGISTER_SIX;
   static const OTP_SCREEN = _Paths.OTP_SCREEN;
   static const UPLOAD_PHOTO_SCREEN = _Paths.UPLOAD_PHOTO_SCREEN;
+  static const PARTNER_PREFERENCE_SCREEN = _Paths.PARTNER_PREFERENCE_SCREEN;
 
 }
 
@@ -34,6 +35,7 @@ abstract class _Paths {
   static const REGISTER_SIX = '/sign-up-six';
   static const OTP_SCREEN = '/otp';
   static const UPLOAD_PHOTO_SCREEN = '/Upload_photo';
+  static const PARTNER_PREFERENCE_SCREEN = '/Partner-preference';
 
 
 }

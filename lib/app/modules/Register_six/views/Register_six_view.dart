@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:indianmilan/app/global_widgets/textEnter.dart';
 import 'package:indianmilan/app/modules/Register_six/controllers/Register_six_cotroller.dart';
+import 'package:indianmilan/app/routes/app_pages.dart';
 import 'package:indianmilan/app/utils/image_helper.dart';
 import 'package:indianmilan/app/utils/string_helper.dart';
 
@@ -79,7 +80,7 @@ class Register_six_view extends GetView<Register_six_Controller> {
                       padding: EdgeInsets.fromLTRB(20,5,20,5),
                       child: TextFieldShow(
                         color: Colors.white,
-                        text: "",
+                        text: MULTILINE_TEXT,
                         fontFamily: 'Lato',
                         fontWeight: FontWeight.w500,
                         fontsize: 18,
@@ -93,7 +94,7 @@ class Register_six_view extends GetView<Register_six_Controller> {
                           padding: EdgeInsets.fromLTRB(20,5,20,5),
                           child: TextFieldShow(
                             color: Colors.orangeAccent,
-                            text: "",
+                            text: mandatory,
                             fontFamily: 'Lato',
                             fontWeight: FontWeight.w500,
                             fontsize: 10,
@@ -110,17 +111,37 @@ class Register_six_view extends GetView<Register_six_Controller> {
                       ),
                       child:
                       Container(
-                        // margin: EdgeInsets.fromLTRB(0,10,0,10),
-                        // // height: MediaQuery.of(context).size.height/1.7,
-                        // width  : MediaQuery.of(context).size.height/2,
-                        // child: Column(
-                        //   children: <Widget>[
-                        //
-                        //
-                        //
-                        //
-                        //
-                        //   ],),
+                        margin: EdgeInsets.fromLTRB(0,10,0,10),
+                        // height: MediaQuery.of(context).size.height/1.7,
+                         width : MediaQuery.of(context).size.height/2,
+                        child: Column(
+                          children: <Widget>[
+
+                            Container(
+                              height: MediaQuery.of(context).size.height/2.8,
+                              child: Padding(padding: EdgeInsets.all(10),
+                                child:  TextFormField(
+                                  minLines: 20,
+                                  maxLines: 50,
+                                  keyboardType: TextInputType.multiline,
+                                  decoration: InputDecoration(
+                                    hintText: MULTILINE_TEXT1,
+                                    hintStyle: TextStyle(
+                                        color: Colors.grey
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            )
+
+
+
+
+
+                          ],),
                       ),
                     ),
                     Container(
@@ -150,6 +171,7 @@ class Register_six_view extends GetView<Register_six_Controller> {
                         ),
                         onTap: () async {
 
+                          Get.offAllNamed(Routes.UPLOAD_PHOTO_SCREEN);
 
                         },
                       ),

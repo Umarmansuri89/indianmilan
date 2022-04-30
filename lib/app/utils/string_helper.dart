@@ -10,6 +10,9 @@ const String Already_ACCOUNT = "Already have any account?";
 const String REGIDTER_NOW = "Register Now?";
 const String Let = "Let's Find Prefect  Match For You";
 const String mandatory = "All Fields are mandatory";
+const String Partner_Preference = "Partner Preference";
+const String Skip_For_Leter = "Skip For Leter";
+
 const String Continue = "Continue";
 const String New_Lets = "New Lets Build Your Profile";
 const String career_details = "Please add your education & career details";
@@ -22,4 +25,10 @@ const String Add_Photos_Leter = "Add Photos Leter";
 const String Add_Your_Photos = "Add Your Photos";
 const String Complete_Your_Photos = "To Complete Your Profile";
 const String Create_Profile = "Create Profile";
+const String basic_prefrence = "Basic Preferences";
+const String Religious_prefrence = "Religious Preferences";
+const String Professional_prefrence = "Professional Preferences";
+const String Location_prefrence = "Location Preferences";
+const String MULTILINE_TEXT = "Tell others about yourself";
+const String MULTILINE_TEXT1 = "Write about yourself....";
 

@@ -1013,7 +1013,7 @@ class Register_five_view extends GetView<Register_five_Controller> {
                         ),
                         onTap: () async {
 
-                          Get.offAllNamed(Routes.OTP_SCREEN);
+                          Get.offAllNamed(Routes.REGISTER_SIX);
                         },
                       ),
                     ),

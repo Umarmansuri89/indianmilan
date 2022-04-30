@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
+import 'package:indianmilan/app/modules/BottomNavigation/bindings/BottomNavigation.dart';
 import 'package:indianmilan/app/modules/Login/bindings/loginBinding.dart';
 import 'package:indianmilan/app/modules/Login/views/login_view.dart';
 import 'package:indianmilan/app/modules/OTP_screen/bindings/OTPBinding.dart';
 import 'package:indianmilan/app/modules/OTP_screen/views/OTP_view.dart';
+import 'package:indianmilan/app/modules/Partner_preference/bindings/Partner_preference_Binding.dart';
+import 'package:indianmilan/app/modules/Partner_preference/views/Partner_preference_view.dart';
 import 'package:indianmilan/app/modules/Register/bindings/RegisterBinding.dart';
 import 'package:indianmilan/app/modules/Register/views/Register_view.dart';
 import 'package:indianmilan/app/modules/Register_five/bindings/Register_five_Binding.dart';
@@ -75,7 +78,7 @@ class AppPages {
     ),
 
     GetPage(
-      name: _Paths.REGISTER_FIVE,
+      name: _Paths.REGISTER_SIX,
       page: () => Register_six_view(),
       binding: Register_six_Binding(),
     ),
@@ -88,6 +91,15 @@ class AppPages {
       name: _Paths.UPLOAD_PHOTO_SCREEN,
       page: () => Upload_photo_view(),
       binding: Upload_photoBinding(),
+    ),
+    GetPage(
+      name: _Paths.PARTNER_PREFERENCE_SCREEN,
+      page: () => Partner_preference_view(),
+      binding: Partner_preference_Binding(),
+    ),  GetPage(
+      name: _Paths.PARTNER_PREFERENCE_SCREEN,
+      page: () => Partner_preference_view(),
+      binding: BottomNavigationBinding(),
     ),
   ];
 }
