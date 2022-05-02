@@ -108,1116 +108,1118 @@ class Register_three_view extends GetView<Register_three_Controller> {
                           ),
                         ),
                       ],),
-
-
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                        borderRadius:
-                        BorderRadius.circular(10),
-                      ),
+                    Expanded(
+                      flex: 0,
                       child:
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0,10,0,10),
-                        // height: MediaQuery.of(context).size.height/1.7,
-                        width  : MediaQuery.of(context).size.height/2,
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
-                                            ),
-                                            overflow: TextOverflow.ellipsis,
+                      Padding(
+                        padding: EdgeInsets.only(top: 10,right: 30,left: 30,bottom: 20),
+                        child: Card(
+                          elevation: 10,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                            BorderRadius.circular(10),
+                          ),
+                          child:
+                          Column(
+                            children: <Widget>[
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
-                                      ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
-                                    ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
-                                    ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                            Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 5,
-                                    horizontal: MediaQuery.of(context).size.height * 0.03),
-                                child:  DropdownButtonHideUnderline(
-                                  child: DropdownButton2(
-                                    isExpanded: true,
-                                    hint: Row(
-                                      children: const [
-                                        SizedBox(
-                                          width: 4,
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
                                         ),
-                                        Expanded(
-                                          child: Text(
-                                            "Select Topic",
-                                            style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: 'Lato',
-                                              color: Colors.black,
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
                                             ),
-                                            overflow: TextOverflow.ellipsis,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    items: controller.items_party_type
-                                        .map((item) => DropdownMenuItem<String>(
-                                      value: item,
-                                      child: Text(
-                                        item,
-                                        style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
+                                        ],
                                       ),
-                                    ))
-                                        .toList(),
-                                    value: controller.selectedValue,
-                                    onChanged: (value) {
-                                      Toast.show(value.toString());
-                                      // setState(() {
-                                      //
-                                      // });
-                                      controller.selectedValue = value as String;
-                                    },
-                                    icon: const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Colors.black,
-                                    ),
-                                    iconOnClick: const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      color: Colors.black,
-                                    ),
-                                    iconSize: 14,
-                                    iconEnabledColor: Colors.white,
-                                    iconDisabledColor: Colors.grey,
-                                    buttonHeight: 50,
-                                    buttonWidth: double.infinity,
-                                    buttonPadding:
-                                    const EdgeInsets.only(left: 14, right: 14),
-                                    dropdownPadding:
-                                    EdgeInsets.only(left: 14, right: 14),
-                                    buttonDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Color(0xff36325A),
-                                        //36325A
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
                                       ),
-                                      color: Colors.white,
-                                      //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
                                     ),
-                                    buttonElevation: 2,
-                                    itemHeight: 40,
-                                    itemPadding: EdgeInsets.only(left: 10, right: 10),
-                                    dropdownMaxHeight: 200,
-                                    //   dropdownWidth: 350,
-                                    dropdownDecoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
+                                  )
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 10,
+                                      horizontal: MediaQuery.of(context).size.height * 0.03),
+                                  child:  DropdownButtonHideUnderline(
+                                    child: DropdownButton2(
+                                      isExpanded: true,
+                                      hint: Row(
+                                        children: const [
+                                          SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "Select Topic",
+                                              style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Lato',
+                                                color: Colors.black,
+                                              ),
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      items: controller.items_party_type
+                                          .map((item) => DropdownMenuItem<String>(
+                                        value: item,
+                                        child: Text(
+                                          item,
+                                          style: const TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.black,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ))
+                                          .toList(),
+                                      value: controller.selectedValue,
+                                      onChanged: (value) {
+                                        Toast.show(value.toString());
+                                        // setState(() {
+                                        //
+                                        // });
+                                        controller.selectedValue = value as String;
+                                      },
+                                      icon: const Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Colors.black,
+                                      ),
+                                      iconOnClick: const Icon(
+                                        Icons.keyboard_arrow_up,
+                                        color: Colors.black,
+                                      ),
+                                      iconSize: 14,
+                                      iconEnabledColor: Colors.white,
+                                      iconDisabledColor: Colors.grey,
+                                      buttonHeight: 50,
+                                      buttonWidth: double.infinity,
+                                      buttonPadding:
+                                      const EdgeInsets.only(left: 14, right: 14),
+                                      dropdownPadding:
+                                      EdgeInsets.only(left: 14, right: 14),
+                                      buttonDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xffc5c4c7),
+                                          //36325A
+                                        ),
+                                        color: Colors.white,
+                                        //image: DecorationImage(image: AssetImage(BORDER_PNG)),
+                                      ),
+                                      //buttonElevation: 2,
+                                      itemHeight: 40,
+                                      itemPadding: EdgeInsets.only(left: 10, right: 10),
+                                      dropdownMaxHeight: 200,
+                                      //   dropdownWidth: 350,
+                                      dropdownDecoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        //color: Color(0xff211D4A),
+                                      ),
+                                      dropdownElevation: 8,
+                                      scrollbarRadius: const Radius.circular(40),
+                                      scrollbarThickness: 5,
+                                      scrollbarAlwaysShow: true,
+                                      /*offset: const Offset(20, 0),*/
                                     ),
-                                    dropdownElevation: 8,
-                                    scrollbarRadius: const Radius.circular(40),
-                                    scrollbarThickness: 5,
-                                    scrollbarAlwaysShow: true,
-                                    /*offset: const Offset(20, 0),*/
-                                  ),
-                                )
-                            ),
-                          ],),
+                                  )
+                              ),
+                            ],),
+                        ),
                       ),
                     ),
+
                     Container(
                       //padding: const EdgeInsets.fromLTRB(00,00,00,00),
                       height: 50,

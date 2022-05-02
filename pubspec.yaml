@@ -44,6 +44,12 @@ dependencies:
   pin_code_text_field: ^1.8.0
   pin_code_fields: ^7.3.0
   persistent_bottom_nav_bar: ^4.0.2
+  salomon_bottom_bar: ^3.3.0
+  custom_line_indicator_bottom_navbar: ^0.0.8
+  google_fonts: ^2.3.2
+  expansion_tile_card: ^2.0.0
+  flutter_svg: ^1.0.3
+  dimension: ^0.1.6
 
 flutter_launcher_name:
   name: "Indian Milan"

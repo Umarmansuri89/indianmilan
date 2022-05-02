@@ -2,6 +2,7 @@ const String WELCOME_TEXT = "";
 const String LOGIN_TYPE_TEXT = "WELCOME TO";
 const String LOGIN = "Login";
 const String SIGNUP = "SignUp";
+const String GREAT = "Great ! Now some basic details about you";
 const String VERIFY = "Verify";
 const String LOGIN_WITH_OTP = "Login With OTP";
 const String FORGOT_PASSWORD = "Forgot Password";

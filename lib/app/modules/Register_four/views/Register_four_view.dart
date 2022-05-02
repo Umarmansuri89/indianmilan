@@ -111,22 +111,21 @@ class Register_four_view extends GetView<Register_four_Controller> {
                       ],),
 
 
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                        borderRadius:
-                        BorderRadius.circular(10),
-                      ),
-                      child:
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0,10,0,10),
-                        // height: MediaQuery.of(context).size.height/1.7,
-                        width  : MediaQuery.of(context).size.height/2,
-                        child: Column(
+                    Padding(
+                      padding: EdgeInsets.only(top: 20,right: 30,left: 30,bottom: 20),
+                      child: Card(
+                        elevation: 10,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                          BorderRadius.circular(15),
+                        ),
+                        child:
+                        Column(
                           children: <Widget>[
                             Padding(
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 5,
+                                    vertical: 10,
                                     horizontal: MediaQuery.of(context).size.height * 0.03),
                                 child:  DropdownButtonHideUnderline(
                                   child: DropdownButton2(
@@ -158,7 +157,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                         style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w300,
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -192,20 +191,20 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
-                                        color: Color(0xff36325A),
+                                        color: Color(0xffc5c4c7),
                                         //36325A
                                       ),
                                       color: Colors.white,
                                       //image: DecorationImage(image: AssetImage(BORDER_PNG)),
                                     ),
-                                    buttonElevation: 2,
+                                    //buttonElevation: 2,
                                     itemHeight: 40,
                                     itemPadding: EdgeInsets.only(left: 10, right: 10),
                                     dropdownMaxHeight: 200,
                                     //   dropdownWidth: 350,
                                     dropdownDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
+                                      //color: Color(0xff211D4A),
                                     ),
                                     dropdownElevation: 8,
                                     scrollbarRadius: const Radius.circular(40),
@@ -217,7 +216,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                             ),
                             Padding(
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 5,
+                                    vertical: 10,
                                     horizontal: MediaQuery.of(context).size.height * 0.03),
                                 child:  DropdownButtonHideUnderline(
                                   child: DropdownButton2(
@@ -249,7 +248,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                         style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w300,
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -283,20 +282,20 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
-                                        color: Color(0xff36325A),
+                                        color: Color(0xffc5c4c7),
                                         //36325A
                                       ),
                                       color: Colors.white,
                                       //image: DecorationImage(image: AssetImage(BORDER_PNG)),
                                     ),
-                                    buttonElevation: 2,
+                                    //buttonElevation: 2,
                                     itemHeight: 40,
                                     itemPadding: EdgeInsets.only(left: 10, right: 10),
                                     dropdownMaxHeight: 200,
                                     //   dropdownWidth: 350,
                                     dropdownDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
+                                      //color: Color(0xff211D4A),
                                     ),
                                     dropdownElevation: 8,
                                     scrollbarRadius: const Radius.circular(40),
@@ -308,7 +307,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                             ),
                             Padding(
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 5,
+                                    vertical: 10,
                                     horizontal: MediaQuery.of(context).size.height * 0.03),
                                 child:  DropdownButtonHideUnderline(
                                   child: DropdownButton2(
@@ -340,7 +339,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                         style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w300,
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -374,20 +373,20 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
-                                        color: Color(0xff36325A),
+                                        color: Color(0xffc5c4c7),
                                         //36325A
                                       ),
                                       color: Colors.white,
                                       //image: DecorationImage(image: AssetImage(BORDER_PNG)),
                                     ),
-                                    buttonElevation: 2,
+                                    //buttonElevation: 2,
                                     itemHeight: 40,
                                     itemPadding: EdgeInsets.only(left: 10, right: 10),
                                     dropdownMaxHeight: 200,
                                     //   dropdownWidth: 350,
                                     dropdownDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
+                                      //color: Color(0xff211D4A),
                                     ),
                                     dropdownElevation: 8,
                                     scrollbarRadius: const Radius.circular(40),
@@ -399,7 +398,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                             ),
                             Padding(
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 5,
+                                    vertical: 10,
                                     horizontal: MediaQuery.of(context).size.height * 0.03),
                                 child:  DropdownButtonHideUnderline(
                                   child: DropdownButton2(
@@ -431,7 +430,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                         style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w300,
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -465,20 +464,20 @@ class Register_four_view extends GetView<Register_four_Controller> {
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
-                                        color: Color(0xff36325A),
+                                        color: Color(0xffc5c4c7),
                                         //36325A
                                       ),
                                       color: Colors.white,
                                       //image: DecorationImage(image: AssetImage(BORDER_PNG)),
                                     ),
-                                    buttonElevation: 2,
+                                    //buttonElevation: 2,
                                     itemHeight: 40,
                                     itemPadding: EdgeInsets.only(left: 10, right: 10),
                                     dropdownMaxHeight: 200,
                                     //   dropdownWidth: 350,
                                     dropdownDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
-                                      color: Color(0xff211D4A),
+                                      //color: Color(0xff211D4A),
                                     ),
                                     dropdownElevation: 8,
                                     scrollbarRadius: const Radius.circular(40),

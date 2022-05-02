@@ -1795,7 +1795,7 @@ class Partner_preference_view extends GetView<Partner_preference_Controller> {
                        ),
                        onTap: () async {
 
-                         Get.offAllNamed(Routes.REGISTER_THREE);
+                         Get.offAllNamed(Routes.Deshboard_view_screen);
                        },
                      ),
                    ),

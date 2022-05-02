@@ -986,6 +986,11 @@ class Register_five_view extends GetView<Register_five_Controller> {
                           ],),
                       ),
                     ),
+
+
+
+
+
                     Container(
                       //padding: const EdgeInsets.fromLTRB(00,00,00,00),
                       height: 50,

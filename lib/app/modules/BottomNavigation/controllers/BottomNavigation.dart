@@ -1,13 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Bottom_navi_Controller extends GetxController {
-  final count = 0.obs;
-  var obscureNewPass = false.obs;
 
-  final TextEditingController emailController = TextEditingController(text: "");
-  final TextEditingController passwordcontroller =
-  TextEditingController(text: "");
+
 
   @override
   void onInit() {

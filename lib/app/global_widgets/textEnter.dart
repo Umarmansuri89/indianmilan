@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TextFieldShow extends StatelessWidget {
   final String text;
   final String fontFamily;
@@ -32,10 +31,10 @@ class TextFieldShow extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 5.0),
       child: Text(
         text,
-        maxLines: maxLines == 0 ? null : maxLines,
+          maxLines: maxLines == 0 ? null : maxLines,
           textAlign: textAlign,
-        overflow: TextOverflow.ellipsis,
-        style: TextStyle(
+          overflow: TextOverflow.ellipsis,
+          style: TextStyle(
             fontFamily: fontFamily,
             color: color,
             fontWeight: fontWeight,
