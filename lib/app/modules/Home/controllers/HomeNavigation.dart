@@ -4,8 +4,11 @@ import 'package:get/get.dart';
 
 class HomeNavigation extends GetxController {
 
+
+
   @override
   void onInit() {
+
     super.onInit();
   }
 
@@ -16,6 +19,8 @@ class HomeNavigation extends GetxController {
 
   @override
   void onClose() {}
+
+
 
 
 

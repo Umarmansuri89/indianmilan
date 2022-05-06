@@ -1,5 +1,6 @@
 import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom_navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:indianmilan/app/modules/Notification/controllers/Notification_controller.dart';
@@ -8,24 +9,19 @@ import 'package:indianmilan/app/modules/Notification/controllers/Notification_co
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:indianmilan/app/routes/app_pages.dart';
+import 'package:indianmilan/app/utils/image_helper.dart';
 
 
 class Notifications_View extends GetView<Notification_controller> {
-  List <String> Images = [
-    'Image_Shortlist_prifile/c43790d490c5e0df03cf4f29f8984bc5.png',
-    'Image_Shortlist_prifile/db6ddf6068a1dc97b258ac246dd12ec9.png',
-    'Image_Shortlist_prifile/Rectangle 154.png',
-    'Image_Shortlist_prifile/saree-girl-profile-pic-01.png',
-    'Image_Shortlist_prifile/saree-profile-pics-dp-for-whatsa.png',
-    'Image_Shortlist_prifile/saree-profile-pics-dp-for-whatsa (2).png',
-  ] ;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Shortlisted Profile"),
+        title: Text("Notification"),
         centerTitle: true,
 
         flexibleSpace: Container(
@@ -38,26 +34,34 @@ class Notifications_View extends GetView<Notification_controller> {
         ),
 
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 12),
-            child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
-          )
+          GestureDetector(
+            onTap:(){
+              Get.offAllNamed(Routes.Deshboard_view_screen);
+            },
+            child: Container(
+              margin: EdgeInsets.only(right: 12),
+              child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+            ),
+          ),
+
         ],
 
-        // leading:Container(
-        //   child: Image.asset("images/backicon_indianmilan.png"),
-        // ),
-
-
-
-
+        leading:   Container(
+          margin: EdgeInsets.only(left: 10),
+          height: 60,
+          width: 60,
+          child: Image.asset(
+            BACK_BUTTON,
+            fit: BoxFit.cover,
+          ),
+        )
       ),
       body: Container(
         margin: EdgeInsets.only( top: 00, bottom: 5),
         height: MediaQuery.of(context).size.height,
         child: ListView.builder(
 
-            itemCount: Images.length,
+            itemCount: 15,
             itemBuilder: (BuildContext context,int index) {
 
               return Card(
@@ -91,7 +95,7 @@ class Notifications_View extends GetView<Notification_controller> {
                           ),
                           child:CircleAvatar(
                             radius: 20,
-                            backgroundImage:AssetImage(Images[index]),
+                            backgroundImage:AssetImage(Girls),
                           ),
                         ),
                       ),
@@ -124,7 +128,7 @@ class Notifications_View extends GetView<Notification_controller> {
                                         height: 10,
                                         width: 10,
                                         margin: EdgeInsets.only(right: 5, left: 10, top: 5,bottom: 5),
-                                        child: Image.asset('Image_Shortlist_prifile/noun_Time_821493.pn')
+                                        child: Image.asset(remaining_time)
                                     ),
                                     Text("2 hours ago" , textAlign: TextAlign.justify,style: GoogleFonts.roboto(
                                         color: Colors.grey,

@@ -1,6 +1,9 @@
 import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom_navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:indianmilan/app/routes/app_pages.dart';
+import 'package:indianmilan/app/utils/image_helper.dart';
 
 
 
@@ -13,15 +16,6 @@ class faqs_Profile extends StatefulWidget {
 
 class _faqs_ProfileState extends State<faqs_Profile> {
 
-
-  List <String> Image = [
-    'Image_Shortlist_prifile/c43790d490c5e0df03cf4f29f8984bc5.png',
-    'Image_Shortlist_prifile/db6ddf6068a1dc97b258ac246dd12ec9.png',
-    'Image_Shortlist_prifile/Rectangle 154.png',
-    'Image_Shortlist_prifile/saree-girl-profile-pic-01.png',
-    'Image_Shortlist_prifile/saree-profile-pics-dp-for-whatsa.png',
-    'Image_Shortlist_prifile/saree-profile-pics-dp-for-whatsa (2).png',
-  ] ;
 
 
   @override
@@ -47,6 +41,15 @@ class _faqs_ProfileState extends State<faqs_Profile> {
           )
         ],
 
+        leading:  GestureDetector(
+          onTap:(){
+            Get.offAllNamed(Routes.Deshboard_view_screen);
+          },
+          child:  Container(
+            child: Image.asset(BACK_BUTTON),
+          ),
+        ),
+
       ),
       body: ListView(
         children: <Widget>[
@@ -66,7 +69,7 @@ class _faqs_ProfileState extends State<faqs_Profile> {
             height: MediaQuery.of(context).size.height/1.2,
             child: ListView.builder(
 
-                itemCount: Image.length,
+                itemCount: 5,
                 itemBuilder: (BuildContext context,int index) {
 
                   return Card(
@@ -98,7 +101,7 @@ class _faqs_ProfileState extends State<faqs_Profile> {
                                     color: Colors.white,
                                     image: DecorationImage(
                                       image: AssetImage(
-                                          Image[index]
+                                          Girls
                                       ),
                                       // image: NetworkImage(
                                       //     "https://www.whatsappimages.in/wp-content/uploads/2021/03/New-Top-Quality-Cute-Girl-Images-For-Whatsapp-Dp-Wallpaper-Download.jpg"),

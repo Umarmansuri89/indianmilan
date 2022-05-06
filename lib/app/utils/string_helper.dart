@@ -15,7 +15,7 @@ const String Partner_Preference = "Partner Preference";
 const String Skip_For_Leter = "Skip For Leter";
 
 const String Continue = "Continue";
-const String New_Lets = "New Lets Build Your Profile";
+const String New_Lets = "Now Lets Build Your Profile";
 const String career_details = "Please add your education & career details";
 const String family_details = "Some details about your family";
 const String digit_OTP = "You will receive a 4 digit OTP Via sms";
@@ -32,4 +32,5 @@ const String Professional_prefrence = "Professional Preferences";
 const String Location_prefrence = "Location Preferences";
 const String MULTILINE_TEXT = "Tell others about yourself";
 const String MULTILINE_TEXT1 = "Write about yourself....";
+const String SHORTLISTED = "Shortlisted";
 

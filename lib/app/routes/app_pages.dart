@@ -1,6 +1,4 @@
 import 'package:get/get.dart';
-import 'package:indianmilan/app/modules/BottomNavigation/bindings/BottomNavigation.dart';
-import 'package:indianmilan/app/modules/BottomNavigation/views/Bottom_view.dart';
 import 'package:indianmilan/app/modules/Help/bindings/Help_Binding.dart';
 import 'package:indianmilan/app/modules/Help/views/Help_view.dart';
 import 'package:indianmilan/app/modules/Home/bindings/Home_Binding.dart';
@@ -28,6 +26,8 @@ import 'package:indianmilan/app/modules/Register_six/views/Register_six_view.dar
 import 'package:indianmilan/app/modules/Register_three/views/Register_three_view.dart';
 import 'package:indianmilan/app/modules/Register_two/bindings/Register_two_Binding.dart';
 import 'package:indianmilan/app/modules/Register_two/views/Register_two_view.dart';
+import 'package:indianmilan/app/modules/Search_profile/bindings/searchprofile_Binding.dart';
+import 'package:indianmilan/app/modules/Search_profile/views/searchprofile_view.dart';
 import 'package:indianmilan/app/modules/Shortlisted_Profile/bindings/Shortlisted_Profile_Binding.dart';
 import 'package:indianmilan/app/modules/Shortlisted_Profile/controllers/Shortlisted_Profile_controller.dart';
 import 'package:indianmilan/app/modules/Shortlisted_Profile/views/Shortlisted_Profile_view.dart';
@@ -36,6 +36,8 @@ import 'package:indianmilan/app/modules/Term_n_condition/controllers/Term_n_cond
 import 'package:indianmilan/app/modules/Term_n_condition/views/Term_n_condition_view.dart';
 import 'package:indianmilan/app/modules/Upload_photo_screen/bindings/Upload_photoBinding.dart';
 import 'package:indianmilan/app/modules/Upload_photo_screen/views/upload_photo_view.dart';
+import 'package:indianmilan/app/modules/Your_cart/bindings/Your_cart_Binding.dart';
+import 'package:indianmilan/app/modules/Your_cart/views/Your_cart_view.dart';
 import 'package:indianmilan/app/modules/dashboard/bindings/dashboard_binding.dart';
 import 'package:indianmilan/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:indianmilan/app/modules/login_type/bindings/login_type.dart';
@@ -46,6 +48,8 @@ import 'package:indianmilan/app/modules/splash/bindings/splash_binding.dart';
 import 'package:indianmilan/app/modules/splash/views/splash_view.dart';
 
 import '../modules/Partner_preference/controllers/Partner_preference_cotroller.dart';
+import '../modules/Partner_prefrance_details/bindings/Partner_prefrance_details_Binding.dart';
+import '../modules/Partner_prefrance_details/views/partner_preference_details_view.dart';
 import '../modules/Register_three/bindings/Register_three_Binding.dart';
 
 part 'app_routes.dart';
@@ -125,11 +129,11 @@ class AppPages {
       binding: Partner_preference_Binding(),
     ),
 
-    GetPage(
-      name: _Paths.BottomNavigation_screen,
-      page: () => Bottom_view(),
-      binding: BottomNavigationBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.BottomNavigation_screen,
+    //   page: () => Bottom_view(),
+    //   binding: deshboard(),
+    // ),
 
     GetPage(
       name: _Paths.Home_screen,
@@ -137,11 +141,11 @@ class AppPages {
       binding: HomeBinding(),
     ),
 
-    GetPage(
-      name: _Paths.Bottom_view_screen,
-      page: () => Bottom_view(),
-      binding: BottomNavigationBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.Bottom_view_screen,
+    //   page: () => Bottom_view(),
+    //   binding: BottomNavigationBinding(),
+    // ),
     GetPage(
       name: _Paths.Deshboard_view_screen,
       page: () => DashboardView(),
@@ -182,6 +186,21 @@ class AppPages {
       name: _Paths.Term_n_condition,
       page: () => Term_n_condition_view(),
       binding: Term_n_condition_Binding(),
+    ),
+    GetPage(
+      name: _Paths.searchprofile,
+      page: () => searchprofile(),
+      binding: searchprofile_Binding(),
+    ),
+    GetPage(
+      name: _Paths.partner_preference_details,
+      page: () => partner_preference_details_View(),
+      binding: Partner_prefrance_details_Binding(),
+    ),
+    GetPage(
+      name: _Paths.Your_cart_view,
+      page: () => Your_cart_view(),
+      binding: Your_cart_Binding(),
     ),
   ];
 }

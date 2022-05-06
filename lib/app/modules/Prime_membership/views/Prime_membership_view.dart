@@ -2,12 +2,14 @@ import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:indianmilan/app/global_widgets/textEnter.dart';
 import 'package:indianmilan/app/modules/Prime_membership/controllers/Prime_membership_controller.dart';
 
 
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:indianmilan/app/routes/app_pages.dart';
 import 'package:indianmilan/app/utils/image_helper.dart';
 
 
@@ -38,7 +40,33 @@ class Premium_Membership_view extends GetView<Prime_membership_controller> {
     return Scaffold(
       // backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Premium Membership"),
+
+        leading:
+        GestureDetector(
+          onTap:(){
+           // Get.offAllNamed(Routes.OTP_SCREEN);
+          },
+          child:  Container(
+            margin: EdgeInsets.only(left: 10),
+            height: 60,
+            width: 60,
+            child: Image.asset(
+              BACK_BUTTON,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+
+
+        title:
+        //Text(),
+        TextFieldShow(
+          color: Colors.white,
+          text: "Premium Membership",
+          fontFamily: 'Lato',
+          fontWeight: FontWeight.w500,
+          fontsize: 14,
+        ),
         centerTitle: true,
 
         flexibleSpace: Container(

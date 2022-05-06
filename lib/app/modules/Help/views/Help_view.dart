@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:get/get.dart';
+import 'package:indianmilan/app/routes/app_pages.dart';
+import 'package:indianmilan/app/utils/image_helper.dart';
 
 
 class help extends GetView<GetxController> {
@@ -32,9 +34,16 @@ class help extends GetView<GetxController> {
           )
         ],
 
-        leading:Container(
-          child: Image.asset("images/backicon_indianmilan.png"),
+        leading:
+        GestureDetector(
+          onTap:(){
+            Get.offAllNamed(Routes.Deshboard_view_screen);
+          },
+          child:  Container(
+            child: Image.asset(BACK_BUTTON),
+          ),
         ),
+
 
 
 
@@ -74,7 +83,7 @@ class help extends GetView<GetxController> {
 
           Container(
             padding: EdgeInsets.only(left: 26,right: 26,top: 5),
-            child: Image.asset("images/helpsupportimage.png"),
+            child: Image.asset(help_card_image),
           ),
 
           Container(
@@ -87,15 +96,11 @@ class help extends GetView<GetxController> {
               childAspectRatio: 0.90,
               children: List.generate(3, (index) {
                 return Container(
-
                   margin: EdgeInsets.only( bottom:10,left: 5,right: 5),
-
                   child: GestureDetector(
-
                     onTap: () {
 
                     },
-
                     child: Card(
                       color: Colors.red[50],
                       elevation: 5,
@@ -114,7 +119,7 @@ class help extends GetView<GetxController> {
                               height: 50,
                               width: 75,
                               child: Image.asset(
-                                "images/logo.png",
+                                Faq_red,
                                 fit: BoxFit.fill,
                               ),
                             ),

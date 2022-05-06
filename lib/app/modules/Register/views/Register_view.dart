@@ -1,3 +1,4 @@
+import 'package:dimension/dimension.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,9 +15,73 @@ import 'package:indianmilan/app/utils/toast.dart';
 
 
 class Register_view extends GetView<RegisterController> {
+  bool toggle = true;
+
+  late Dimension beginWidth;
+  late Dimension beginHeight;
+  late Dimension endWidth;
+  late Dimension endHeight;
+
+
+
+  Widget getTitle() {
+    return Container(
+      margin: EdgeInsets.only(left: 00),
+      child: TextFieldShow(
+        color: Colors.orangeAccent,
+        text: SIGNUP,
+        fontFamily: 'Lato',
+        fontWeight: FontWeight.w300,
+        fontsize: 20,
+      ),
+    );
+  }
+
+  Container getBackButton() {
+    return Container(
+      margin: EdgeInsets.only(left: 14),
+      height: 60,
+      width: 60,
+      child: Image.asset(
+        BACK_BUTTON,
+        fit: BoxFit.cover,
+      ),
+    );;
+  }
+
+  Row getHeader() {
+    return  Row(
+      children: <Widget>[
+        GestureDetector(
+            onTap:(){
+              Get.offAllNamed(Routes.LOGIN_TYPE);
+            },
+          child: getBackButton(),
+        ),
+
+        const Spacer(
+          flex: 1,
+        ),
+        getTitle(),
+        const Spacer(flex: 2)
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+   // bool isScreenWide = MediaQuery.of(context).size.width >= kMinWidthOfLargeScreen;
+    final double statusBarHeight = MediaQuery.of(context).padding.top;
+
+    beginWidth = Dimension.max(20.toPercentLength, 700.toPXLength);
+    beginHeight = (90.toVHLength - 10.toPXLength);
+
+    endWidth = Dimension.clamp(200.toPXLength, 40.toVWLength, 200.toPXLength);
+    endHeight = 50.toVHLength +
+        10.toPercentLength -
+        Dimension.min(4.toPercentLength, 40.toPXLength);
+
     //LocalNotificationService.initialize(context);
     return
     Scaffold(
@@ -34,7 +99,7 @@ class Register_view extends GetView<RegisterController> {
                         children: <Widget>[
                           Container(
                             width: MediaQuery.of(context).size.width,
-                            height: MediaQuery.of(context).size.height/1.8,
+                            height:  350.toPercentLength.value,
                             child: Image.asset(
                               LOGIN_BACKGRAUND,
                               fit: BoxFit.fill,
@@ -43,71 +108,48 @@ class Register_view extends GetView<RegisterController> {
 
                         ],)
 
-
                   ),
+
 
                   Column(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
 
-                          Container(
-                            height: 80,
-                            width: 80,
-                            child: Image.asset(
-                              BACK_BUTTON,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-
-                          Container(
-                            padding: EdgeInsets.all(20),
-                            margin: EdgeInsets.fromLTRB(40, 00, 00, 00),
-                            child: TextFieldShow(
-                              color: Colors.orangeAccent,
-                              text: SIGNUP,
-                              fontFamily: 'Lato',
-                              fontWeight: FontWeight.w300,
-                              fontsize: 30,
-                            ),
-                          ),
-
-
-                        ],),
-
-                      Container(
-                        padding: EdgeInsets.fromLTRB(20,5,20,5),
-                        child: TextFieldShow(
-                          color: Colors.white,
-                          text: Let,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w500,
-                          fontsize: 18,
-                        ),
-                      ),
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                      Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(20,5,20,0),
+                            padding: EdgeInsets.fromLTRB(0.0, statusBarHeight, 0.0, 0.0),
+                            child: Column(
+                              children: <Widget>[getHeader()],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(bottom: 10),
+                            // padding: EdgeInsets.fromLTRB(20,5,20,5),
                             child: TextFieldShow(
-                              color: Colors.orangeAccent,
-                              text: mandatory,
+                              color: Colors.white,
+                              text: Let,
                               fontFamily: 'Lato',
                               fontWeight: FontWeight.w500,
-                              fontsize: 10,
+                              fontsize: 14,
                             ),
                           ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.fromLTRB(00,0,30,0),
+                                child: TextFieldShow(
+                                  color: Colors.orangeAccent,
+                                  text: mandatory,
+                                  fontFamily: 'Lato',
+                                  fontWeight: FontWeight.w500,
+                                  fontsize: 10,
+                                ),
+                              ),
+                            ],),
                         ],),
-
-
-                      Expanded(
-                        flex: 0,
-                        child:
                       Padding(
-                        padding: EdgeInsets.only(top: 10,right: 30,left: 30,bottom: 20),
+                        padding: EdgeInsets.only(top: 00,right: 30,left: 30,bottom: 20),
                         child: Card(
                           elevation: 10,
                           clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -550,9 +592,6 @@ class Register_view extends GetView<RegisterController> {
                             ],),
                         ),
                       ),
-                      ),
-
-
                       Container(
                         //padding: const EdgeInsets.fromLTRB(00,00,00,00),
                         height: 50,
@@ -563,16 +602,15 @@ class Register_view extends GetView<RegisterController> {
                             alignment: Alignment.center,
                             margin: EdgeInsets.only(top: 00),
                             decoration: BoxDecoration(
-                              color: Colors.blue,
+                              gradient: LinearGradient(
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
+                                  colors: <Color>[Colors.blue, Colors.lightBlue]),
                               borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                color: Colors.blue,
-                                width: 1,
-                              ),
                             ),
                             child: TextFieldShow(
                               color: Colors.white,
-                              text: SIGNUP,
+                              text: Continue,
                               fontFamily: 'Lato',
                               fontWeight: FontWeight.w500,
                               fontsize: 20,
@@ -586,7 +624,7 @@ class Register_view extends GetView<RegisterController> {
                       ),
                       Container(
 
-                        margin: EdgeInsets.fromLTRB(00, 10, 00, 00),
+                        margin: EdgeInsets.fromLTRB(00, 30, 00, 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -602,17 +640,24 @@ class Register_view extends GetView<RegisterController> {
                                 fontsize: 14,
                               ),
                             ),
-                            Container(
-                              padding: EdgeInsets.all(00),
-                              child: TextFieldShow(
-                                color: Colors.red,
-                                text: " "+LOGIN,
-                                fontFamily: 'Lato',
-                                fontWeight: FontWeight.w500,
-                                fontsize: 14,
-                              ),
-                            ),
 
+                            GestureDetector(
+                              onTap:(){
+                                Get.offAllNamed(Routes.REGISTER);
+                              },
+
+                              child:  Container(
+                                padding: EdgeInsets.all(00),
+                                child: TextFieldShow(
+                                  color: Colors.red,
+                                  text: " "+LOGIN,
+                                  fontFamily: 'Lato',
+                                  fontWeight: FontWeight.w500,
+                                  fontsize: 14,
+                                ),
+                              ),
+
+                            ),
 
                           ],),
                       )

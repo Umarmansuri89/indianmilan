@@ -28,6 +28,8 @@ abstract class Routes {
   static const help_screen = _Paths.help_screen;
   static const privacy_policy = _Paths.privacy_policy;
   static const Term_n_condition = _Paths.Term_n_condition;
+  static const searchprofile = _Paths.searchprofile;
+  static const partner_preference_details = _Paths.partner_preference_details;
 
 }
 
@@ -58,6 +60,9 @@ abstract class _Paths {
   static const help_screen = '/help_screen';
   static const privacy_policy = '/privacy_policy';
   static const Term_n_condition = '/Term_n_condition';
+  static const searchprofile = '/searchprofile';
+  static const partner_preference_details = '/partner_preference_details';
+  static const Your_cart_view = '/Your_cart_view';
 
 
 }
