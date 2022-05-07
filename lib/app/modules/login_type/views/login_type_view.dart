@@ -78,7 +78,7 @@ class login_type_View extends GetView<login_typeController> {
                       ),
                       onTap: () async {
 
-                        Get.offAllNamed(Routes.LOGIN);
+                        Get.toNamed(Routes.LOGIN);
 
 
                       },
@@ -111,7 +111,7 @@ class login_type_View extends GetView<login_typeController> {
                       ),
                       onTap: () async {
 
-                        Get.offAllNamed(Routes.REGISTER);
+                        Get.toNamed(Routes.REGISTER);
                       },
                     ),
                   ),

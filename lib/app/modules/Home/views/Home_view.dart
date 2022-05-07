@@ -27,21 +27,49 @@ class Home_view extends GetView<HomeNavigation> {
               fit: BoxFit.fill,
             ),
           ),
-          child: Row(
-            children: <Widget>[
-              CircleAvatar(
-                radius: 40,
-                backgroundImage: AssetImage(PROFILE),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Row(children: <Widget>[
+          child: GestureDetector(
+            onTap: (){
+              Get.toNamed(Routes.Profile_screen);
+            },
+            child: Row(
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: AssetImage(PROFILE),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Row(children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.fromLTRB(00, 10, 00, 00),
+                        child: Text(
+                          ('ABC'),
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                            fontFamily: 'Playfair Display',
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 10,right: 10),
+                        height: 20,
+                        width: 20,
+                        child: Image.asset(
+                          edit_profile_white,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],),
+
+
                     Container(
-                      margin: EdgeInsets.fromLTRB(00, 10, 00, 00),
+                      margin: EdgeInsets.fromLTRB(20, 00, 00, 00),
                       child: Text(
-                        ('ABC'),
+                        ('Chetan@gmail.com'),
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,
@@ -50,50 +78,29 @@ class Home_view extends GetView<HomeNavigation> {
                         ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 10,right: 10),
-                      height: 20,
-                      width: 20,
-                      child: Image.asset(
-                        edit_profile_white,
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ],),
-
-
-                  Container(
-                    margin: EdgeInsets.fromLTRB(20, 00, 00, 00),
-                    child: Text(
-                      ('Chetan@gmail.com'),
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontFamily: 'Playfair Display',
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
          ListTile(
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 10),
+             height: 20,
+             width: 20,
              child: Image.asset(
                unselect_home,
+               height: 20,
+               width: 20,
                fit: BoxFit.contain,
              ),
            ),
            title: Text('Home'),
            onTap: () {
-             Get.offAllNamed(Routes.Deshboard_view_screen);
+             Get.toNamed(Routes.Deshboard_view_screen);
            },
          ),
 
@@ -101,9 +108,9 @@ class Home_view extends GetView<HomeNavigation> {
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 25,
              child: Image.asset(
                unselect_cupel,
                fit: BoxFit.contain,
@@ -111,7 +118,7 @@ class Home_view extends GetView<HomeNavigation> {
            ),
            title: Text('Pertner Prefreance'),
            onTap: () {
-             Get.offAllNamed(Routes.partner_preference_details);
+             Get.toNamed(Routes.partner_preference_details);
 
            },
          ),
@@ -119,9 +126,9 @@ class Home_view extends GetView<HomeNavigation> {
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 25,
              child: Image.asset(
                unselect_star,
                fit: BoxFit.contain,
@@ -129,7 +136,7 @@ class Home_view extends GetView<HomeNavigation> {
            ),
            title: Text('Shortlisted Profile'),
            onTap: () {
-             Get.offAllNamed(Routes.Shortlisted_Profile_screen);
+             Get.toNamed(Routes.Shortlisted_Profile_screen);
 
            },
          ),
@@ -137,24 +144,25 @@ class Home_view extends GetView<HomeNavigation> {
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 20,
+             width: 20,
              child: Image.asset(
                unselect_chat,
                fit: BoxFit.contain,
              ),
            ),
            title: Text('My chats'),
-           onTap: () {},
+           onTap: () {
+           },
          ),
          ListTile(
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 20,
              child: Image.asset(
                unselect_heart,
                fit: BoxFit.contain,
@@ -169,9 +177,9 @@ class Home_view extends GetView<HomeNavigation> {
            hoverColor: Colors.blue,
            dense: true,
            leading:Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 20,
              child: Image.asset(
                unselect_home,
                fit: BoxFit.contain,
@@ -179,16 +187,16 @@ class Home_view extends GetView<HomeNavigation> {
            ),
            title: Text('Support Pages'),
            onTap: () {
-             Get.offAllNamed(Routes.help_screen);
+             Get.toNamed(Routes.help_screen);
            },
          ),
          ListTile(
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 20,
              child: Image.asset(
                unselect_dayri,
                fit: BoxFit.contain,
@@ -196,7 +204,7 @@ class Home_view extends GetView<HomeNavigation> {
            ),
            title: Text('Privecy Policy'),
            onTap: () {
-             Get.offAllNamed(Routes.privacy_policy);
+             Get.toNamed(Routes.privacy_policy);
 
            },
          ),
@@ -204,9 +212,9 @@ class Home_view extends GetView<HomeNavigation> {
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 20,
              child: Image.asset(
                unselect_condition,
                fit: BoxFit.contain,
@@ -214,32 +222,34 @@ class Home_view extends GetView<HomeNavigation> {
            ),
            title: Text('Term And Condition'),
            onTap: () {
-             Get.offAllNamed(Routes.Term_n_condition);
+             Get.toNamed(Routes.Term_n_condition);
            },
          ),
          ListTile(
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 20,
              child: Image.asset(
                unselect_faqs,
                fit: BoxFit.contain,
              ),
            ),
            title: Text('FAQs'),
-           onTap: () {},
+           onTap: () {
+             Get.toNamed(Routes.faqs);
+           },
          ),
 
          ListTile(
            hoverColor: Colors.blue,
            dense: true,
            leading: Container(
-             margin: EdgeInsets.only(left: 00),
-             height: 50,
-             width: 30,
+             margin: EdgeInsets.only(left: 7),
+             height: 25,
+             width: 20,
              child: Image.asset(
                unselect_logout,
                fit: BoxFit.contain,
@@ -273,7 +283,7 @@ class Home_view extends GetView<HomeNavigation> {
          actions: [
            GestureDetector(
              onTap:() {
-               Get.offAllNamed(Routes.Notofication_screen);
+               Get.toNamed(Routes.Notofication_screen);
              },
 
              child:  Container(
@@ -319,9 +329,14 @@ class Home_view extends GetView<HomeNavigation> {
 
 
 
-                Container(
-                  margin: EdgeInsets.only(right: 20,top: 20),
-                  child: Icon(Icons.search,color: Colors.blue,),
+                GestureDetector(
+                  onTap: (){
+                    Get.toNamed(Routes.Your_cart_view);
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(right: 20,top: 20),
+                    child: Icon(Icons.search,color: Colors.blue,),
+                  ),
                 )
               ],
             ),
@@ -373,68 +388,74 @@ class Home_view extends GetView<HomeNavigation> {
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) =>
 
-                    Container(
-                      child: Stack(
-                        children: [
+                    GestureDetector(
+                      onTap: (){
+                        Get.toNamed(Routes.Profile_details_screen);
+                        // Profile_details_screen
+                      },
+                      child: Container(
+                        child: Stack(
+                          children: [
 
-                          Container(
-                            width: 330,
-                            // margin: EdgeInsets.only(left: 10,right: 10),
-                            decoration: new BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: new DecorationImage(image: new AssetImage(Girls),),
+                            Container(
+                              width: 330,
+                              // margin: EdgeInsets.only(left: 10,right: 10),
+                              decoration: new BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                image: new DecorationImage(image: new AssetImage(Girls),),
+                              ),
                             ),
-                          ),
 
-                          Container(
-                            margin: EdgeInsets.only(left: 10,bottom: 40),
-                            child: Row(
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      margin: EdgeInsets.only(left:20,top: 20),
-                                      child: Text("SUSMITA SHARMA",style: TextStyle(color: Colors.white,fontSize: 18),),
-                                    ),
-
-                                    Container(
-                                      margin: EdgeInsets.only(left:20,top: 1),
-                                      child: Text("Age 26 | 160cm | 5ft",style: TextStyle(color: Colors.white,fontSize: 13),),
-                                    ),
-
-                                    Container(
-                                      margin: EdgeInsets.only(left:20,top: 1),
-                                      child: Text("Software Engineer- Company Name",style: TextStyle(color: Colors.white,fontSize: 13),),
-                                    ),
-                                  ],
-                                ),
-                                Container(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Row(
+                            Container(
+                              margin: EdgeInsets.only(left: 10,bottom: 40),
+                              child: Row(
+                                children: [
+                                  Column(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-
                                       Container(
-                                        child: Icon(Icons.location_on,color: Colors.white,),
+                                        margin: EdgeInsets.only(left:20,top: 20),
+                                        child: Text("SUSMITA SHARMA",style: TextStyle(color: Colors.white,fontSize: 18),),
                                       ),
 
                                       Container(
-                                        width: 55,
-                                        child: Text("23 main street new York",style: TextStyle(color: Colors.white),),
-                                      )
+                                        margin: EdgeInsets.only(left:20,top: 1),
+                                        child: Text("Age 26 | 160cm | 5ft",style: TextStyle(color: Colors.white,fontSize: 13),),
+                                      ),
+
+                                      Container(
+                                        margin: EdgeInsets.only(left:20,top: 1),
+                                        child: Text("Software Engineer- Company Name",style: TextStyle(color: Colors.white,fontSize: 13),),
+                                      ),
                                     ],
                                   ),
-                                )
-                              ],
+                                  Container(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
 
+                                        Container(
+                                          child: Icon(Icons.location_on,color: Colors.white,),
+                                        ),
+
+                                        Container(
+                                          width: 55,
+                                          child: Text("23 main street new York",style: TextStyle(color: Colors.white),),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+
+                              ),
                             ),
-                          ),
 
-                        ],
+                          ],
 
+                        ),
                       ),
                     )
 
@@ -581,38 +602,43 @@ class Home_view extends GetView<HomeNavigation> {
               itemBuilder: (BuildContext context, int index) =>
 
 
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(left: 15),
-                        width: 190,
-                        child: Image.asset(girls1,fit: BoxFit.fill,),
-                      ),
-
-                      Container(
-                        margin: EdgeInsets.only(left: 22),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              child: Text('Neha Rathore',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w700),),
-                            ),
-
-                            Container(
-                              margin: EdgeInsets.only(top: 1),
-                              child: Text("25yrs | 5'5'| MP/ Indore"),
-                            )
-                          ],
-
+                  GestureDetector(
+                    onTap: (){
+                      Get.toNamed(Routes.Profile_details_screen);
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          width: 190,
+                          child: Image.asset(girls1,fit: BoxFit.fill,),
                         ),
-                      ),
+
+                        Container(
+                          margin: EdgeInsets.only(left: 22),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                child: Text('Neha Rathore',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w700),),
+                              ),
+
+                              Container(
+                                margin: EdgeInsets.only(top: 1),
+                                child: Text("25yrs | 5'5'| MP/ Indore"),
+                              )
+                            ],
+
+                          ),
+                        ),
 
 
-                    ],
+                      ],
 
 
+                    ),
                   ),
             ),
           ),
@@ -698,7 +724,6 @@ class Home_view extends GetView<HomeNavigation> {
                       margin: EdgeInsets.only(left: 15),
                       child: Container(
                         width: 285,
-
                         child: Row(
                           children: [
                             Container(

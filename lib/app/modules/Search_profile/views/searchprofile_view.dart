@@ -1,14 +1,19 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 
-class searchprofile extends StatefulWidget {
-  const searchprofile({Key? key}) : super(key: key);
+import '../../../routes/app_pages.dart';
+import '../../../utils/image_helper.dart';
+
+class searchprofile_view extends StatefulWidget {
+  const searchprofile_view({Key? key}) : super(key: key);
 
   @override
-  _searchprofileState createState() => _searchprofileState();
+  _searchprofile_viewState createState() => _searchprofile_viewState();
 }
 
-class _searchprofileState extends State<searchprofile> {
+class _searchprofile_viewState extends State<searchprofile_view> {
 
 
 
@@ -42,14 +47,26 @@ class _searchprofileState extends State<searchprofile> {
         ),
 
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 12),
-            child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
-          )
+          GestureDetector(
+              onTap:() {
+                Get.toNamed(Routes.Notofication_screen);
+              },
+
+              child:  Container(
+                margin: EdgeInsets.only(right: 12),
+                child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+              )
+
+          ),
         ],
 
-        leading:Container(
-          child: Image.asset("images/backicon_indianmilan.png"),
+        leading:  GestureDetector(
+          onTap:(){
+            Get.back();
+          },
+          child:  Container(
+            child: Image.asset(BACK_BUTTON),
+          ),
         ),
 
       ),

@@ -34,22 +34,27 @@ class DashboardView extends GetView<DashboardController> {
                   // Respond to item press.
                 },
                 items: [
+
                   BottomNavigationBarItem(
                     label: "Home",
                     icon: Icon(Icons.home),
                   ),
+
                   BottomNavigationBarItem(
                     label: "Matches",
                     icon: Icon(Icons.heart_broken),
                   ),
+
                   BottomNavigationBarItem(
-                    label: "Chet",
+                    label: "Chat",
                     icon: Icon(Icons.chat_rounded),
                   ),
+
                   BottomNavigationBarItem(
                     label: "Premium",
                     icon: Icon(Icons.star),
                   ),
+
                   /*BottomNavigationBarItem(
                     label: "Settings",
                     icon: Icon(Icons.settings),

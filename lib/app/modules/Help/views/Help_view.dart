@@ -28,16 +28,23 @@ class help extends GetView<GetxController> {
         ),
 
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 12),
-            child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
-          )
+          GestureDetector(
+              onTap:() {
+                Get.toNamed(Routes.Notofication_screen);
+              },
+
+              child:  Container(
+                margin: EdgeInsets.only(right: 12),
+                child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+              )
+
+          ),
         ],
 
         leading:
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.Deshboard_view_screen);
+           Get.back();
           },
           child:  Container(
             child: Image.asset(BACK_BUTTON),

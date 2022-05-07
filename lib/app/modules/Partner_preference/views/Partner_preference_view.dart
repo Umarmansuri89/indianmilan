@@ -52,7 +52,7 @@ class Partner_preference_view extends GetView<Partner_preference_Controller> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.UPLOAD_PHOTO_SCREEN);
+            Get.back();
           },
           child: getBackButton(),
         ),
@@ -1916,7 +1916,7 @@ class Partner_preference_view extends GetView<Partner_preference_Controller> {
                             ),
                           ),
                           onTap: () async {
-                            Get.offAllNamed(Routes.Deshboard_view_screen);
+                            Get.toNamed(Routes.Deshboard_view_screen);
                           },
                         ),
                       ),

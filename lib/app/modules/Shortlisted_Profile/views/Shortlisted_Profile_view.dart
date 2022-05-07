@@ -24,7 +24,7 @@ class Shortlisted_Profile extends GetView<Shortlisted_Profile_controller> {
                 leading:
                     GestureDetector(
                       onTap: (){
-                        Get.offAllNamed(Routes.Deshboard_view_screen);
+                       Get.back();
                       },
                       //
                       child:  Container(
@@ -60,10 +60,17 @@ class Shortlisted_Profile extends GetView<Shortlisted_Profile_controller> {
                 ),
 
                 actions: [
-                  Container(
-                    margin: EdgeInsets.only(right: 12),
-                    child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
-                  )
+                  GestureDetector(
+                      onTap:() {
+                        Get.toNamed(Routes.Notofication_screen);
+                      },
+
+                      child:  Container(
+                        margin: EdgeInsets.only(right: 12),
+                        child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+                      )
+
+                  ),
                 ],
               ),
               body: ListView(

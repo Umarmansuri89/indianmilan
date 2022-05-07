@@ -2,9 +2,11 @@ import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:indianmilan/app/modules/Login/views/login_view.dart';
-import 'package:indianmilan/app/modules/privacy_policy/controllers/privacy_policy_Navigation.dart';
+// import 'package:indianmilan/app/modules/privacy_policy/controllers/privacy_policy_Navigation.dart';
 import 'package:indianmilan/app/routes/app_pages.dart';
 import 'package:indianmilan/app/utils/image_helper.dart';
+
+import '../controllers/privacy_policy_Navigation.dart';
 
 
 class privacy_policy_view extends GetView<privacy_policy_Navigation>{
@@ -34,7 +36,8 @@ class privacy_policy_view extends GetView<privacy_policy_Navigation>{
 
         leading: GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.Deshboard_view_screen);
+            Get.back();
+            // Get.offAllNamed(Routes.Deshboard_view_screen);
           },
           child:  Container(
             child: Image.asset(BACK_BUTTON),

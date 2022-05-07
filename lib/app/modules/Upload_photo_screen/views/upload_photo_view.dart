@@ -60,7 +60,7 @@ class Upload_photo_view extends GetView<Upload_photo_Controller> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.OTP_SCREEN);
+            Get.back();
           },
           child: getBackButton(),
         ),
@@ -237,7 +237,7 @@ class Upload_photo_view extends GetView<Upload_photo_Controller> {
                             ),
                           ),
                           onTap: () async {
-                            Get.offAllNamed(Routes.PARTNER_PREFERENCE_SCREEN);
+                            Get.toNamed(Routes.PARTNER_PREFERENCE_SCREEN);
 
                             //Get.offAllNamed(Routes.REGISTER_TWO);
                           },

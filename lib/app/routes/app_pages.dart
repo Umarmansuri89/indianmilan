@@ -42,15 +42,21 @@ import 'package:indianmilan/app/modules/dashboard/bindings/dashboard_binding.dar
 import 'package:indianmilan/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:indianmilan/app/modules/login_type/bindings/login_type.dart';
 import 'package:indianmilan/app/modules/login_type/views/login_type_view.dart';
-import 'package:indianmilan/app/modules/privacy_policy/bindings/privacy_policy_Binding.dart';
-import 'package:indianmilan/app/modules/privacy_policy/views/privacy_policy_view.dart';
+// import 'package:indianmilan/app/modules/privacy_policy/bindings/privacy_policy_Binding.dart';
+// import 'package:indianmilan/app/modules/privacy_policy/views/privacy_policy_view.dart';
 import 'package:indianmilan/app/modules/splash/bindings/splash_binding.dart';
 import 'package:indianmilan/app/modules/splash/views/splash_view.dart';
 
+import '../modules/My_profile_details/bindings/profile_Binding.dart';
+import '../modules/My_profile_details/views/profile_view.dart';
 import '../modules/Partner_preference/controllers/Partner_preference_cotroller.dart';
 import '../modules/Partner_prefrance_details/bindings/Partner_prefrance_details_Binding.dart';
 import '../modules/Partner_prefrance_details/views/partner_preference_details_view.dart';
+import '../modules/Register/privacy_policy/bindings/privacy_policy_Binding.dart';
+import '../modules/Register/privacy_policy/views/privacy_policy_view.dart';
 import '../modules/Register_three/bindings/Register_three_Binding.dart';
+import '../modules/faq/bindings/faqs.dart';
+import '../modules/faq/views/faqs_view.dart';
 
 part 'app_routes.dart';
 
@@ -189,7 +195,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.searchprofile,
-      page: () => searchprofile(),
+      page: () => searchprofile_view(),
       binding: searchprofile_Binding(),
     ),
     GetPage(
@@ -201,6 +207,16 @@ class AppPages {
       name: _Paths.Your_cart_view,
       page: () => Your_cart_view(),
       binding: Your_cart_Binding(),
+    ),
+    GetPage(
+      name: _Paths.faqs,
+      page: () => faqs_Profile(),
+      binding: faqs_Binding(),
+    ),
+    GetPage(
+      name: _Paths.Profile_details_screen,
+      page: () => profile_view_view(),
+      binding: profile_view_Binding(),
     ),
   ];
 }

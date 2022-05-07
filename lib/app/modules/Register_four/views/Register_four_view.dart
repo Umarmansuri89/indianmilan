@@ -57,7 +57,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.REGISTER_THREE);
+            Get.back();
           },
           child: getBackButton(),
         ),
@@ -557,7 +557,7 @@ class Register_four_view extends GetView<Register_four_Controller> {
                           ),
                           onTap: () async {
 
-                            Get.offAllNamed(Routes.REGISTER_FIVE);
+                            Get.toNamed(Routes.REGISTER_FIVE);
 
                           },
                         ),

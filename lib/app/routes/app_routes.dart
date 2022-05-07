@@ -30,6 +30,9 @@ abstract class Routes {
   static const Term_n_condition = _Paths.Term_n_condition;
   static const searchprofile = _Paths.searchprofile;
   static const partner_preference_details = _Paths.partner_preference_details;
+  static const faqs = _Paths.faqs;
+  static const Profile_details_screen = _Paths.Profile_details_screen;
+  static const Your_cart_view = _Paths.Your_cart_view;
 
 }
 
@@ -63,6 +66,8 @@ abstract class _Paths {
   static const searchprofile = '/searchprofile';
   static const partner_preference_details = '/partner_preference_details';
   static const Your_cart_view = '/Your_cart_view';
+  static const faqs = '/faqs';
+  static const Profile_details_screen = '/Profile_details_screen';
 
 
 }

@@ -1,6 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:indianmilan/app/utils/image_helper.dart';
+
+import '../../../routes/app_pages.dart';
 
 class Your_cart_view extends StatefulWidget {
   const Your_cart_view({Key? key}) : super(key: key);
@@ -42,10 +47,17 @@ class _Your_cart_view_State extends State<Your_cart_view> {
         ),
 
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 12),
-            child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
-          )
+          GestureDetector(
+              onTap:() {
+                Get.toNamed(Routes.Notofication_screen);
+              },
+
+              child:  Container(
+                margin: EdgeInsets.only(right: 12),
+                child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+              )
+
+          ),
         ],
 
         // leading:Container(
@@ -219,7 +231,7 @@ class _Your_cart_view_State extends State<Your_cart_view> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                               ),
-                              child:Image.asset('Image_Shortlist_prifile/Group 55996.png'),
+                              child:Image.asset(king),
                             ),
                           ),
                         ],

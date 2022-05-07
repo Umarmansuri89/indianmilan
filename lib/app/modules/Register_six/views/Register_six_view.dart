@@ -40,9 +40,11 @@ class Register_six_view extends GetView<Register_six_Controller> {
       margin: EdgeInsets.only(left: 10),
       height: 60,
       width: 60,
-      child: Image.asset(
-        BACK_BUTTON,
-        fit: BoxFit.cover,
+      child: GestureDetector(
+        child: Image.asset(
+          BACK_BUTTON,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
@@ -52,7 +54,7 @@ class Register_six_view extends GetView<Register_six_Controller> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.REGISTER_FIVE);
+            Get.back();
           },
           child: getBackButton(),
         ),
@@ -210,7 +212,7 @@ class Register_six_view extends GetView<Register_six_Controller> {
                           ),
                           onTap: () async {
 
-                            Get.offAllNamed(Routes.OTP_SCREEN);
+                            Get.toNamed(Routes.OTP_SCREEN);
 
                           },
                         ),

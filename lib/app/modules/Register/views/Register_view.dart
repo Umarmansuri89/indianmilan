@@ -54,7 +54,7 @@ class Register_view extends GetView<RegisterController> {
       children: <Widget>[
         GestureDetector(
             onTap:(){
-              Get.offAllNamed(Routes.LOGIN_TYPE);
+              Get.back();
             },
           child: getBackButton(),
         ),
@@ -598,6 +598,9 @@ class Register_view extends GetView<RegisterController> {
                         margin: EdgeInsets.fromLTRB(30,20,30,00),
                         alignment: Alignment.center,
                         child: GestureDetector(
+                          onTap: () async {
+                            Get.toNamed(Routes.REGISTER_TWO);
+                          },
                           child: Container(
                             alignment: Alignment.center,
                             margin: EdgeInsets.only(top: 00),
@@ -616,10 +619,7 @@ class Register_view extends GetView<RegisterController> {
                               fontsize: 20,
                             ),
                           ),
-                          onTap: () async {
 
-                            Get.offAllNamed(Routes.REGISTER_TWO);
-                          },
                         ),
                       ),
                       Container(
@@ -643,7 +643,7 @@ class Register_view extends GetView<RegisterController> {
 
                             GestureDetector(
                               onTap:(){
-                                Get.offAllNamed(Routes.REGISTER);
+                                Get.toNamed(Routes.REGISTER);
                               },
 
                               child:  Container(

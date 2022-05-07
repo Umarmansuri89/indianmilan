@@ -36,25 +36,31 @@ class Notifications_View extends GetView<Notification_controller> {
         actions: [
           GestureDetector(
             onTap:(){
-              Get.offAllNamed(Routes.Deshboard_view_screen);
+              Get.toNamed(Routes.Deshboard_view_screen);
             },
             child: Container(
               margin: EdgeInsets.only(right: 12),
-              child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+              child: Icon(Icons.home_outlined,color: Colors.white,),
             ),
           ),
 
         ],
-
-        leading:   Container(
-          margin: EdgeInsets.only(left: 10),
-          height: 60,
-          width: 60,
-          child: Image.asset(
-            BACK_BUTTON,
-            fit: BoxFit.cover,
+          leading:
+          GestureDetector(
+            onTap: (){
+              Get.back();
+            },
+            child:  Container(
+              margin: EdgeInsets.only(left: 10),
+              height: 60,
+              width: 60,
+              child: Image.asset(
+                BACK_BUTTON,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-        )
+
       ),
       body: Container(
         margin: EdgeInsets.only( top: 00, bottom: 5),

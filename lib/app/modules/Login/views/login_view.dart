@@ -54,7 +54,7 @@ class login_view extends GetView<loginController> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.LOGIN_TYPE);
+            Get.back();
           },
 
             child: getBackButton(),
@@ -266,14 +266,19 @@ class login_view extends GetView<loginController> {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
 
-                                    Container(
-                                      padding: EdgeInsets.all(20),
-                                      child: TextFieldShow(
-                                        color: Colors.red,
-                                        text: LOGIN_WITH_OTP,
-                                        fontFamily: 'Lato',
-                                        fontWeight: FontWeight.w500,
-                                        fontsize: 14,
+                                    GestureDetector(
+                                      onTap: (){
+                                        Get.toNamed(Routes.OTP_SCREEN);
+                                      },
+                                      child: Container(
+                                        padding: EdgeInsets.all(20),
+                                        child: TextFieldShow(
+                                          color: Colors.red,
+                                          text: LOGIN_WITH_OTP,
+                                          fontFamily: 'Lato',
+                                          fontWeight: FontWeight.w500,
+                                          fontsize: 14,
+                                        ),
                                       ),
                                     ),
                                     Container(
@@ -303,6 +308,9 @@ class login_view extends GetView<loginController> {
                         margin: EdgeInsets.fromLTRB(30,20,30,00),
                         alignment: Alignment.center,
                         child: GestureDetector(
+                          onTap: () async {
+                             Get.toNamed(Routes.OTP_SCREEN);
+                          },
                           child: Container(
                             alignment: Alignment.center,
                             margin: EdgeInsets.only(top: 00),
@@ -321,10 +329,7 @@ class login_view extends GetView<loginController> {
                               fontsize: 20,
                             ),
                           ),
-                          onTap: () async {
 
-                            Get.offAllNamed(Routes.Deshboard_view_screen);
-                          },
                         ),
                       ),
                       Container(
@@ -346,7 +351,7 @@ class login_view extends GetView<loginController> {
                             ),
                             GestureDetector(
                               onTap:(){
-                                Get.offAllNamed(Routes.REGISTER);
+                                Get.toNamed(Routes.REGISTER);
                               },
 
                               child:  Container(

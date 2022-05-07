@@ -34,6 +34,8 @@ const String send = "assets/send.png";
 const String chatting = "assets/chatting.png";
 const String Faq_red = "assets/Faq_red.png";
 const String remaining_time = "assets/remaining_time.png";
+const String approve = "assets/approve.png";
+const String Verify = "assets/Verify.png";
 
 //drawer images
 
@@ -47,5 +49,6 @@ const String unselect_logout = "assets/unselect_logout.png";
 const String unselect_home = "assets/unselect_home.png";
 const String unselect_faqs = "assets/unselect_faqs.png";
 const String edit_profile_white = "assets/edit_profile_white.png";
+const String Pluse_Button = "assets/Pluse Button.png";
 
 

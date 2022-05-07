@@ -1,11 +1,15 @@
 import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom_navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:indianmilan/app/global_widgets/textEnter.dart';
 import 'package:indianmilan/app/modules/Home/controllers/HomeNavigation.dart';
 import 'package:indianmilan/app/modules/Login/views/login_view.dart';
 import 'package:indianmilan/app/modules/My_profile/controllers/profile_controller.dart';
 import 'package:indianmilan/app/utils/image_helper.dart';
+
+import '../../../routes/app_pages.dart';
 
 
 class profile_view extends GetView<profile_controller> {
@@ -28,15 +32,26 @@ class profile_view extends GetView<profile_controller> {
         ),
 
         actions: [
-          Container(
-            margin: EdgeInsets.only(right: 12),
-            child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+          GestureDetector(
+              onTap:() {
+                Get.toNamed(Routes.Notofication_screen);
+              },
+
+              child:  Container(
+                margin: EdgeInsets.only(right: 12),
+                child: Icon(Icons.notifications_none_outlined,color: Colors.white,),
+              )
+
           )
         ],
 
-        leading:
-        Container(
-          child: Image.asset(BACK_BUTTON),
+        leading:  GestureDetector(
+          onTap:(){
+            Get.back();
+          },
+          child:  Container(
+            child: Image.asset(BACK_BUTTON),
+          ),
         ),
 
       ),
@@ -59,7 +74,7 @@ class profile_view extends GetView<profile_controller> {
                       Container(
                         height: 100,
                         width: 100,
-                        child: Image.asset("images/profileimage.png"),
+                        child: Image.asset(PROFILE),
                       ),
                       // CircleAvatar(
                       //   foregroundColor: Colors.white,

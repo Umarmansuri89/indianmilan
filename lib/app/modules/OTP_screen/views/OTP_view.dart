@@ -53,7 +53,7 @@ class OTP_view extends GetView<OTP_Controller> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.offAllNamed(Routes.REGISTER_SIX);
+            Get.back();
           },
           child: getBackButton(),
         ),
@@ -333,7 +333,7 @@ class OTP_view extends GetView<OTP_Controller> {
                           ),
                           onTap: () async {
 
-                            Get.offAllNamed(Routes.UPLOAD_PHOTO_SCREEN);
+                            Get.toNamed(Routes.Deshboard_view_screen);
                           },
                         ),
                       ),
