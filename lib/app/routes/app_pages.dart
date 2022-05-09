@@ -11,6 +11,8 @@ import 'package:indianmilan/app/modules/Notification/bindings/Notification.dart'
 import 'package:indianmilan/app/modules/Notification/views/Notification_view.dart';
 import 'package:indianmilan/app/modules/OTP_screen/bindings/OTPBinding.dart';
 import 'package:indianmilan/app/modules/OTP_screen/views/OTP_view.dart';
+import 'package:indianmilan/app/modules/OTP_screen_login/bindings/OTP_login_Binding.dart';
+import 'package:indianmilan/app/modules/OTP_screen_login/views/OTP_login_view.dart';
 import 'package:indianmilan/app/modules/Partner_preference/bindings/Partner_preference_Binding.dart';
 import 'package:indianmilan/app/modules/Partner_preference/views/Partner_preference_view.dart';
 import 'package:indianmilan/app/modules/Prime_membership/bindings/Prime_membership.dart';
@@ -217,6 +219,11 @@ class AppPages {
       name: _Paths.Profile_details_screen,
       page: () => profile_view_view(),
       binding: profile_view_Binding(),
+    ),
+    GetPage(
+      name: _Paths.OTP_login,
+      page: () => OTP_login_view(),
+      binding: OTP_login_Binding(),
     ),
   ];
 }

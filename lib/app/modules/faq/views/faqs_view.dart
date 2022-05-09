@@ -23,7 +23,7 @@ class _faqs_ProfileState extends State<faqs_Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Shortlisted Profile"),
+        title: Text("Faq's"),
         centerTitle: true,
 
         flexibleSpace: Container(

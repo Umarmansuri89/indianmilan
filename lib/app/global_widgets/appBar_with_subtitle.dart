@@ -8,6 +8,7 @@ AppBar appbarSubTITLE(String title, String sub_title, Function onTap) =>
       iconTheme: IconThemeData(
         color: Colors.black, //change your color here
       ),
+
       elevation: 2,
       leadingWidth: 30,
       backgroundColor: Color(0xff0D0B21),

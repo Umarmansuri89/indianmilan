@@ -33,6 +33,7 @@ abstract class Routes {
   static const faqs = _Paths.faqs;
   static const Profile_details_screen = _Paths.Profile_details_screen;
   static const Your_cart_view = _Paths.Your_cart_view;
+  static const OTP_login = _Paths.OTP_login;
 
 }
 
@@ -68,6 +69,7 @@ abstract class _Paths {
   static const Your_cart_view = '/Your_cart_view';
   static const faqs = '/faqs';
   static const Profile_details_screen = '/Profile_details_screen';
+  static const OTP_login = '/OTP_login';
 
 
 }
