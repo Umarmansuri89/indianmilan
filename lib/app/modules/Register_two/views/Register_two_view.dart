@@ -4,11 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:indianmilan/app/global_widgets/textEnter.dart';
 import 'package:indianmilan/app/global_widgets/textfield_ui.dart';
-import 'package:indianmilan/app/modules/Login/controllers/login.dart';
-import 'package:indianmilan/app/modules/Register/controllers/Register_cotroller.dart';
 import 'package:indianmilan/app/modules/Register_two/controllers/Register_two_cotroller.dart';
-import 'package:indianmilan/app/modules/login_type/controllers/login_type_controller.dart';
-import 'package:indianmilan/app/modules/splash/controllers/splash_controller.dart';
 import 'package:indianmilan/app/routes/app_pages.dart';
 import 'package:indianmilan/app/utils/image_helper.dart';
 import 'package:indianmilan/app/utils/string_helper.dart';
@@ -55,7 +51,7 @@ class Register_two_view extends GetView<Register_two_Controller> {
       children: <Widget>[
         GestureDetector(
           onTap:(){
-            Get.toNamed(Routes.REGISTER);
+            Get.back();
           },
           child: getBackButton(),
         ),

@@ -15,6 +15,7 @@ abstract class Routes {
   static const REGISTER_FIVE = _Paths.REGISTER_FIVE;
   static const REGISTER_SIX = _Paths.REGISTER_SIX;
   static const OTP_SCREEN = _Paths.OTP_SCREEN;
+  static const OTP_Login_SCREEN = _Paths.OTP_Login_SCREEN;
   static const UPLOAD_PHOTO_SCREEN = _Paths.UPLOAD_PHOTO_SCREEN;
   static const PARTNER_PREFERENCE_SCREEN = _Paths.PARTNER_PREFERENCE_SCREEN;
   static const BottomNavigation_screen = _Paths.BottomNavigation_screen;
@@ -51,6 +52,7 @@ abstract class _Paths {
   static const REGISTER_FIVE = '/sign-up-five';
   static const REGISTER_SIX = '/sign-up-six';
   static const OTP_SCREEN = '/otp';
+  static const OTP_Login_SCREEN = '/OTP_Login_SCREEN';
   static const UPLOAD_PHOTO_SCREEN = '/Upload_photo';
   static const PARTNER_PREFERENCE_SCREEN = '/Partner-preference';
   static const BottomNavigation_screen = '/BottomNavigation';

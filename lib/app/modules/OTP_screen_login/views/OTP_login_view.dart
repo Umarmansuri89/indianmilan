@@ -98,9 +98,9 @@ class OTP_login_view extends GetView<OTP_Controller> {
                         children: <Widget>[
                           Container(
                             width: MediaQuery.of(context).size.width,
-                            height:  350.toPercentLength.value,
+                            height:  300.toPercentLength.value,
                             child: Image.asset(
-                              LOGIN_BACKGRAUND,
+                              LOGIN_otp_BACKGRAUND,
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -121,43 +121,26 @@ class OTP_login_view extends GetView<OTP_Controller> {
                               children: <Widget>[getHeader()],
                             ),
                           ),
-                         /* Container(
-                            margin: EdgeInsets.only(bottom: 10),
-                            // padding: EdgeInsets.fromLTRB(20,5,20,5),
-                            child: TextFieldShow(
-                              color: Colors.white,
-                              text: career_details,
-                              fontFamily: 'Lato',
-                              fontWeight: FontWeight.w500,
-                              fontsize: 14,
-                            ),
-                          ),*/
-                          /*Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: <Widget>[
-                              Container(
-                                padding: EdgeInsets.fromLTRB(00,0,30,0),
-                                child: TextFieldShow(
-                                  color: Colors.orangeAccent,
-                                  text: mandatory,
-                                  fontFamily: 'Lato',
-                                  fontWeight: FontWeight.w500,
-                                  fontsize: 10,
-                                ),
-                              ),
-                            ],),*/
                         ],),
 
 
                       Container(
-                        margin: EdgeInsets.only(top: 100),
+                        // margin: EdgeInsets.only(top: 150, bottom: 50),
+                        height: 300,
+                        alignment: Alignment.center,
                         //height: 200.toPercentLength.value,
                         child:  Padding(
                             padding: EdgeInsets.all(20),
-                            child: Image.asset(
-                              CONGRACULATION,
-                              fit: BoxFit.fill,
-                            )
+                            child: Container(
+                              padding: EdgeInsets.all(10),
+                              child: TextFieldShow(
+                                color: Colors.white,
+                                text: OTP,
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w500,
+                                fontsize: 20,
+                              ),
+                            ),
                         ),
                       ),
 
@@ -168,7 +151,7 @@ class OTP_login_view extends GetView<OTP_Controller> {
                         padding: EdgeInsets.all(00),
                         child: TextFieldShow(
                           color: Colors.black,
-                          text: digit_OTP,
+                          text: digit_OTP_login,
                           fontFamily: 'Lato',
                           fontWeight: FontWeight.w500,
                           fontsize: 14,
@@ -178,30 +161,13 @@ class OTP_login_view extends GetView<OTP_Controller> {
                       Container(
                         margin: EdgeInsets.only(bottom: 20),
                         padding: EdgeInsets.all(00),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(00),
-                              child: TextFieldShow(
-                                color: Colors.red,
-                                text: mobile,
-                                fontFamily: 'Lato',
-                                fontWeight: FontWeight.w500,
-                                fontsize: 14,
-                              ),
-                            ),
-                            Container(
-                              height: 20,
-                              width: 20,
-                              padding: EdgeInsets.all(00),
-                              margin: EdgeInsets.fromLTRB(10, 00, 00, 00),
-                              child:  Image.asset(
-                                EDIT_MOBILE,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ],),
+                        child: TextFieldShow(
+                          color: Colors.grey,
+                          text: Dont_share_it,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w500,
+                          fontsize: 14,
+                        ),
                       ),
 
 
@@ -306,6 +272,32 @@ class OTP_login_view extends GetView<OTP_Controller> {
                           )
 
                       ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(top: 20),
+                            child: TextFieldShow(
+                              color: Colors.black,
+                              text: receive_OTP,
+                              fontFamily: 'Lato',
+                              fontWeight: FontWeight.w500,
+                              fontsize: 14,
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: TextFieldShow(
+                              color: Colors.red,
+                              text: Resend_OTP,
+                              fontFamily: 'Lato',
+                              fontWeight: FontWeight.w500,
+                              fontsize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
                       Container(
                         //padding: const EdgeInsets.fromLTRB(00,00,00,00),
                         height: 50,
@@ -325,7 +317,7 @@ class OTP_login_view extends GetView<OTP_Controller> {
                             ),
                             child: TextFieldShow(
                               color: Colors.white,
-                              text: VERIFY,
+                              text: Continue,
                               fontFamily: 'Lato',
                               fontWeight: FontWeight.w500,
                               fontsize: 20,
@@ -335,26 +327,6 @@ class OTP_login_view extends GetView<OTP_Controller> {
 
                             Get.toNamed(Routes.Deshboard_view_screen);
                           },
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(top: 20),
-                        child: TextFieldShow(
-                          color: Colors.black,
-                          text: receive_OTP,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w500,
-                          fontsize: 14,
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        child: TextFieldShow(
-                          color: Colors.red,
-                          text: Resend_OTP,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w500,
-                          fontsize: 14,
                         ),
                       ),
 

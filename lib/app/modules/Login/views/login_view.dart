@@ -268,7 +268,7 @@ class login_view extends GetView<loginController> {
 
                                     GestureDetector(
                                       onTap: (){
-                                        Get.toNamed(Routes.OTP_SCREEN);
+                                        Get.toNamed(Routes.OTP_Login_SCREEN);
                                       },
                                       child: Container(
                                         padding: EdgeInsets.all(20),
@@ -309,7 +309,7 @@ class login_view extends GetView<loginController> {
                         alignment: Alignment.center,
                         child: GestureDetector(
                           onTap: () async {
-                             Get.toNamed(Routes.OTP_SCREEN);
+                             Get.toNamed(Routes.OTP_Login_SCREEN);
                           },
                           child: Container(
                             alignment: Alignment.center,

@@ -643,7 +643,7 @@ class Register_view extends GetView<RegisterController> {
 
                             GestureDetector(
                               onTap:(){
-                                Get.toNamed(Routes.REGISTER);
+                                Get.toNamed(Routes.LOGIN);
                               },
 
                               child:  Container(

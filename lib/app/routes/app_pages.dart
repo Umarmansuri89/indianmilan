@@ -122,6 +122,11 @@ class AppPages {
       binding: OTPBinding(),
     ),
     GetPage(
+      name: _Paths.OTP_Login_SCREEN,
+      page: () => OTP_login_view(),
+      binding: OTP_login_Binding(),
+    ),
+    GetPage(
       name: _Paths.UPLOAD_PHOTO_SCREEN,
       page: () => Upload_photo_view(),
       binding: Upload_photoBinding(),

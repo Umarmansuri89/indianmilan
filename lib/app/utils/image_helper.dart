@@ -4,6 +4,7 @@ const String SPLASH_IMAGE = "assets/Splash.png";
 const String LOGIN_TYPE_BACKGRAUND = "assets/login_type_backgraund.png";
 const String LOGIN_TYPE_COUPLE = "assets/login_type_couple.png";
 const String LOGIN_BACKGRAUND = "assets/login_backgraound.png";
+const String LOGIN_otp_BACKGRAUND = "assets/login_otp.png";
 const String BACK_BUTTON = "assets/back_button.png";
 const String help_card_image = "assets/help_card_image.png";
 const String CONGRACULATION = "assets/Congraculation.png";

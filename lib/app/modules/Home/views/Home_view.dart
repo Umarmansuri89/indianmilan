@@ -256,12 +256,22 @@ class Home_view extends GetView<HomeNavigation> {
              ),
            ),
            title: Text('Logout'),
-           onTap: () {},
+           onTap: () {
+             Get.toNamed(Routes.LOGIN);
+           },
          ),
       ],
     ),
        ),
        appBar: AppBar(
+         shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.only(
+               bottomRight: Radius.circular(30),
+               bottomLeft: Radius.circular(30)
+           )
+         ),
+         elevation: 10,
+         // toolbarHeight: 80,
          title: TextFieldShow(
            color: Colors.white,
            text: "Location",
@@ -272,7 +282,12 @@ class Home_view extends GetView<HomeNavigation> {
          centerTitle: true,
 
          flexibleSpace: Container(
+           // height: 40,
            decoration: BoxDecoration(
+               borderRadius: BorderRadius.only(
+                   bottomRight: Radius.circular(30),
+                   bottomLeft: Radius.circular(30)
+               ),
              gradient: LinearGradient(
                  begin: Alignment.centerLeft,
                  end: Alignment.centerRight,
